@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"  xmlns:th = "http://www.htymeLeaf.org" th:fragment="layout(content)">
+<head>
+	<meta charset="UTF-8" />
+	<title>base Template </title>
+</head>
+<body>
+	  <h1>header section</h1>
+	  
+	  <div th:replace="${content}"></div>
+	  
+	  <h1>Footer section</h1>
+</body>
+</html>

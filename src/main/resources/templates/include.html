@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Include Fragment</title>
+</head>
+<body>
+	<h1>Include Fragment</h1>
+	<footer id="host" th:include="footer::footer1(a,b)">
+	  <h1 th:text="${a}"></h1>
+	</footer>
+</body>
+</html>

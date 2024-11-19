@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Conditional statement</title>
+</head>
+<body>
+	<h1>Conditional statement</h1>
+	<h1>elvis operator</h1>
+
+	<!-- Elvis operators -->
+	<h1 th:style=" ${ShopStatus} == true ? 'color:Green' : 'color:red'">
+		Shope Status: <span
+			th:text=" ${ShopStatus} == true ? 'open' : 'Not open'"></span>
+	</h1>
+
+	<!-- if-unless statement -->
+	<h1>If unless statement</h1>
+	<h1 th:if="${gender} == 'M' ">Male</h1>
+	<h1 th:unless="${gender} == 'M'">Female</h1>
+
+	<!-- Switch Statement -->
+	<div th:switch="${ #strings.length(number) }">
+		<h1 th:case="5">Number Length is (5)</h1>
+		<h1 th:case= "1">Number Length is (1)</h1>
+		<h1 th:case="'6'">Number Length is (6)</h1>
+		<h1 th:case="*">wrong input</h1>
+	</div>
+</body>
+</html>

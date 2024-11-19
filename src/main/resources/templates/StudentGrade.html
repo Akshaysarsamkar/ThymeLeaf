@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>StudentGrade</title>
+</head>
+<body>
+
+	<!--  Display a list of student with grade  -->
+	<h1>Student name with grade</h1>
+	<ul>
+		<li th:each="n , status : ${list}"><span
+			th:text=" 'Name of student : ' + ${ n.name} + ' grade ' + ${n.grade} "
+			th:style="${status.even} ? 'color:red' : 'color:green' "></span></li>
+	</ul>
+</body>
+</html>

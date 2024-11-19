@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>User Role</title>
+</head>
+<body>
+	<h1>
+		<span th:if="${role} == 'Admin'">Admin</span>
+	</h1>
+	<h1>
+		<span th:if="${role} == 'User'">User</span>
+	</h1>
+
+	<h1>
+		<span th:if="${role} == 'Guest'">Guest</span>
+	</h1>
+
+
+	<h1
+		th:text="${membership} == 'Active' ? 'Member Ship status : ' + ${membership} : 'Member Ship status : ' + ${membership} "></h1>
+	<!--  membership is active or not  -->
+</body>
+</html>

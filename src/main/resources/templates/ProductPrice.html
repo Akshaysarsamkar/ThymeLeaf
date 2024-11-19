@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Product Prices</title>
+</head>
+<body>
+
+	<h1>Student name with grade</h1>
+	<ul>
+		<li th:each="n , status : ${list}"><span
+			th:text=" 'Name of product : ' + ${ n.name} + ' price ' + ${n.price} "
+			th:style="${status.even} ? 'font-size:25px' : 'font-size:15px' "></span></li>
+	</ul>
+
+</body>
+</html>
+

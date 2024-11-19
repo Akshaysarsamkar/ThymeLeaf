@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>List Iteration</title>
+</head>
+<body>
+
+	<h1>List Iteration</h1>
+
+	<ul>
+
+		<li th:each="n : ${carname}"><span th:text="${n}"></span></li>
+
+	</ul>
+
+
+	<!-- Index , size , count -->
+
+	<ul>
+
+		<li th:each="n , status: ${carname}"><span
+			th:text="${n} + '  ( index ' + ${status.index}  + ' , size ' + ${status.size} + ' , count ' + ${status.count}  + ')'  "></span>
+		</li>
+
+	</ul>
+
+	<!-- odd / even  -->
+	<ul>
+
+		<li th:each="n , status: ${carname}"><span
+			th:style="${status.odd} ? 'color:pink;' : 'color:red;' "
+			th:text="${n} + '  ( index ' + ${status.index}  + ' , size ' + ${status.size} + ' , count ' + ${status.count}  + ')'  "></span>
+		</li>
+
+	</ul>
+
+</body>
+</html>

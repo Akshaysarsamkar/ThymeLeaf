@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Footer</title>
+</head>
+<body>
+	<footer id="fragment" th:fragment="footer1(title ,name,age)">
+		<h1>Footer section in fragment</h1>
+		<h2>Using to add footer</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+			eaque libero itaque numquam ipsa iure totam vel nesciunt! Quae modi
+			rerum repudiandae laborum ullam atque illum odio amet quo ipsum
+			voluptate quas inventore voluptates explicabo quasi saepe doloremque
+			sed dolores in ipsa odit nesciunt quis consequatur provident libero
+			nemo molestiae dignissimos placeat quos veniam similique rem.</p>
+		<h1 th:text="${title}"></h1>
+		<h1 th:text="'Name of Student is : ' + ${name}"></h1>
+		<h1 th:text="'Age of student is : ' + ${age}"></h1>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org"
+	th:replace="base::layout(~{::div})">
+<head>
+<meta charset="UTF-8" />
+<title>Navbar</title>
+</head>
+<body>
+	<div>
+
+		<nav>
+			<ul>
+				<li>About</li>
+				<li>home</li>
+				<li>contact</li>
+				<li>gallary</li>
+				<li>carrer</li>
+			</ul>
+		</nav>
+		<div id="nav" th:replace="footer::footer1(${title},${name},${age})">
+
+		</div>
+	</div>
+</body>
+</html>

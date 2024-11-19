@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<h1 th:text="${ #strings.toUpperCase(name) }">We are learn
+		Thymeleaf</h1>
+	<h1 th:text="${name}"></h1>
+	<h2>
+		Name of owner is :<span th:text="${name}"></span>
+	</h2>
+
+	<div th:with="a=89,n=${name}">
+		<h1>
+			name is <span th:text="${n}"></span>
+		</h1>
+		<h1>
+			<span th:text=" 'value of a is :' +  ${a}"></span>
+		</h1>
+	</div>
+
+	<h1>
+		<span th:text=" 'value of a is :' +  ${a}"></span>
+	</h1>
+
+
+<h1> date is <span th:text="${ date }"></span></h1>
+    
+
+
+
+</body>
+</html>

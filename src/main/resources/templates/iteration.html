@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Iteration in thymeleaf</title>
+</head>
+<body>
+
+	<h1>Iteration Operations</h1>
+
+	<h1>Array Iteration</h1>
+	<!-- Array Iteration -->
+	<ul>
+		<li th:each=" n : ${names}"><span th:text="${n}"></span></li>
+	</ul>
+
+	<!-- with index attribute  -->
+	<ul>
+		<li th:each="n,in : ${names} "><span
+			th:text="${in.index + 1} + '] ' + ${n}"></span></li>
+	</ul>
+
+	<!-- Count , Size attribute -->
+	<ul>
+		<li th:each="n,status : ${names}"><span
+			th:text="${ status.count} + ' ] ' + ${n} + '  ( Size ' + ${status.size} + ')' "></span>
+		</li>
+	</ul>
+
+
+
+	<!-- add/even  Attribute -->
+	<ul>
+		<li th:each="n,status : ${names}"><span
+			th:style="${ status.odd} ? 'color:red;' : 'color:blue;' "  th:text="${n}"></span>
+		</li>
+	</ul>
+
+</body>
+</html>
